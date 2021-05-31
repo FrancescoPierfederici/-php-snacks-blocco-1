@@ -9,7 +9,10 @@ $partitebasket=["Olimpia Milano - Cantù | 55-60","Virtus Bologna- Varese | 70-6
 
 
 // echo  $partitebasket;
-var_dump($partitebasket)
+for ($i=0; $i < count($partitebasket); $i++) { 
+    $partitestampate= $partitebasket[$i];
+    echo $partitestampate;
+}
 
 
 
