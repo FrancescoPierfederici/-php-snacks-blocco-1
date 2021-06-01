@@ -55,13 +55,35 @@ $posts = [
         
 
                         <?php
+                       
+
+
                         $dati_extra_keys = array_keys($posts);
 
                         for ($y = 0; $y < count($dati_extra_keys); $y++) {
                             $key = $dati_extra_keys[$y];
-                            $value = $posts[ '01/06/2021'];
+                            $value = $posts[ $key];
+                            
 
-                            echo "<li><strong>" . $key . "</strong>: " . $value . "</li>";
+
+
+                            echo "<li>" . $key; 
+                            echo "<ul>";
+                            for ($i=0; $i < count($value); $i++) { 
+                                $singlePost= $value[$i];
+                                echo "<li>";
+                                echo  "<strong>" . $singlePost["title"]. "</strong><br>";
+                                echo  "<em>" . $singlePost["author"]. "</em>";
+                                echo  "<p>" . $singlePost["text"]. "</p>";
+
+                                echo  "</li>";
+
+                            }
+
+
+
+                            echo "</ul>";
+                            echo  "</li>";
                         }
                         ?>
 
